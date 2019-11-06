@@ -9,7 +9,7 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10px;
     font-size: 45px;
 }
 
@@ -28,7 +28,7 @@ h1 {
     margin-right: auto;
     width: 1000px;
     height: 250px;
-    margin-top: 5%;
+    margin-top: 10px;
 }
 
 img {
@@ -37,7 +37,55 @@ img {
     margin: 5px;
 }
 
-.logContainer {
-    display: inline-block;
+.round {
+    display: flex;
+    font-size: 25px;
+    height: 30px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.pointsContainer {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    width: 990px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.textsContainer {
     font-size: 20px;
+    display: flex;
+    height: 20px;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.roundResult {
+    display: flex;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.resetBtn {
+    width: 100px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    background-color: rgb(49, 51, 54);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
 }

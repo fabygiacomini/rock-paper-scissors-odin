@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rock-Paper-Scissors Game</title>
-    <link href="style-rps.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
-</head>
-<body>
-    <h1 class="choose">Choose your Destiny! &#128521</h1>
-    <div class="btnContainer">
-        <button id="rock" class="buttons"><img src="img/rock.png" alt="rock symbol" id="imgRock">Rock</button>
-        <button id="paper" class="buttons"><img src="img/paper.png" alt="paper symbol" id="imgPaper">Paper</button>
-        <button id="scissors" class="buttons"><img src="img/scissors.png" alt="scissors symbol" id="imgScissors">Scissors</button>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Rock-Paper-Scissors Game</title>
+        <link href="style-rps.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    </head>
 
-    <div class="logContainer">
+    <body>
+        <h1 class="choose">Choose your Destiny! &#128521</h1>
+        <div class="btnContainer">
+            <button id="rock" class="buttons"><img src="img/rock.png" alt="rock symbol" id="imgRock">Rock</button>
+            <button id="paper" class="buttons"><img src="img/paper.png" alt="paper symbol" id="imgPaper">Paper</button>
+            <button id="scissors" class="buttons"><img src="img/scissors.png" alt="scissors symbol" id="imgScissors">Scissors</button>
+        </div>
         <div class="round"><p></p></div>
-        <div class="playerPoints"><p></p></div>
-        <div class="computerPoints"><p></p></div>
+
+        <!-- show the number of rounds and points -->
+        <div class="pointsContainer">
+            <div class="playerPoints"><p></p></div>
+            <div class="computerPoints"><p></p></div>
+        </div>
+
+        <!-- show only the choices and the match result -->
+        <div class="textsContainer">
+            <div class="picksShown"><p></p></div>
+            <div class="textRound"><p></p></div>
+        </div>
+        <!-- show the final result of the game (5 rounds) -->
         <div class="roundResult"><p></p></div>
-    </div>
 
+        <div class="receiveResetBtn">
+            <!-- <button class="resetBtn">Reset Game </button>  it will be create on javascript after 5 rounds of game-->
+        </div>
 
-<script type="text/javascript" src="rps.js" ></script>
-</body>
+        <script type="text/javascript" src="rps.js" ></script>
+    </body>
 </html>
