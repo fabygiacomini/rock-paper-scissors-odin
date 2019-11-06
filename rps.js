@@ -11,7 +11,8 @@ const playerPoints = document.querySelector('.playerPoints > p');
 const computerPoints = document.querySelector('.computerPoints > p');
 const roundResult = document.querySelector('.roundResult > p');
 const textRound = document.querySelector('.textRound > p');
-const pickText =document.querySelector('.picksShown > p');
+const pickText = document.querySelector('.picksShown > p');
+const resetButton = document.querySelector('.resetBtn')
 
 // all happens after the CLICK EVENT
 btn.forEach((button) => {
@@ -36,25 +37,20 @@ btn.forEach((button) => {
         if(playerScore == 5 || computerScore == 5) {
             let ultimateWinner = determineUltimateWinner(playerScore, computerScore);
             roundResult.textContent = ultimateWinner;
+            btn.forEach((item) => { // disable game buttons after someone wins
+                item.disabled = true;
+            })
+            // make reset button show after someone won > game is over
+            resetButton.style.display = 'block';
 
-            // create reset button after someone won > game is over
-            const receiveRstBtn = document.querySelector('.receiveResetBtn'); //call the div with class "receiveResetBtn"
-            const resetButton = document.createElement('button');
-            resetButton.classList.add('resetBtn');
-            resetButton.textContent = 'Reset Game';
-            receiveRstBtn.appendChild(resetButton);
-
-            // make reset button work -> WORKING ON IT
-            // const cleanAll = document.querySelector('.resetBtn');
-            // cleanAll.addEventListener('click', (e) => {
-            //     rounds = 0;
-            //     playerScore = 0;
-            //     computerScore = 0;
-            // })
+            // reset event
+            const cleanAll = document.querySelector('.resetBtn');
+            cleanAll.addEventListener('click', (e) => {
+                reset();
+            })
         }
     })  
 });
-
 // make computer choose
 function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3);
@@ -91,4 +87,20 @@ function determineUltimateWinner(playerScore, computerScore) {
     } else {
         return 'You lose the game. Don\'t be sad, try again!';
     } 
+}
+
+function reset() {
+    rounds = 0;
+    playerScore = 0;
+    computerScore = 0;
+    match.textContent = '';
+    playerPoints.textContent = '';
+    computerPoints.textContent = '';
+    pickText.textContent = '';
+    textRound.textContent = '';
+    roundResult.textContent = '';
+    btn.forEach((item) => {
+        item.disabled = false;
+    })
+    resetButton.style.display = 'none';
 }

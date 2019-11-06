@@ -79,6 +79,7 @@ img {
 }
 
 .resetBtn {
+    display: none;
     width: 100px;
     height: 25px;
     margin-left: auto;
@@ -86,6 +87,5 @@ img {
     margin-bottom: 0;
     background-color: rgb(49, 51, 54);
     font-size: 15px;
-    display: flex;
     justify-content: center;
 }
