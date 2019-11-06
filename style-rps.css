@@ -1,0 +1,43 @@
+* {
+    font-family: 'Yeon Sung', cursive;
+    color: rgb(201, 206, 214);
+}
+
+body {
+    background-color: rgb(71, 75, 77);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 45px;
+}
+
+.buttons {
+    background-color: rgb(49, 51, 54);
+    width: 300px;
+    height: 200px;
+    font-size: 30px;
+    margin: 8px;
+    display: inline-block;
+}
+
+.btnContainer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 250px;
+    margin-top: 5%;
+}
+
+img {
+    width: 100px;
+    height: 80px;
+    margin: 5px;
+}
+
+.logContainer {
+    display: inline-block;
+    font-size: 20px;
+}
